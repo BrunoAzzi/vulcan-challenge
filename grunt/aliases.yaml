@@ -1,0 +1,18 @@
+default:
+    - 'lint'
+    - 'test'
+    - 'build'
+    - 'connect'
+    - 'open'
+    - 'watch'
+
+lint:
+    - 'jshint'
+
+test:
+    - 'karma'
+
+build:
+    - 'clean'
+    - 'copy'
+    - 'browserify'

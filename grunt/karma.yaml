@@ -1,0 +1,44 @@
+options:
+
+    logLevel: 'WARN'
+
+    frameworks:
+        - 'browserify'
+        - 'jasmine'
+
+    files:
+        - 'app/js/**/*-spec.js'
+
+    preprocessors:
+        'app/js/**/!(*-spec).js':
+            - 'browserify'
+            - 'coverage'
+
+    browsers: ['PhantomJS']
+
+    phantomjsLauncher:
+        exitOnResourceError: true
+
+    browserify:
+      debug: true
+
+unit:
+
+    reporters:
+        - 'mocha'
+
+    singleRun: true
+
+coverage:
+
+    reporters:
+        - 'coverage'
+
+    singleRun: true
+
+    coverageReporter:
+        dir : 'coverage/'
+        reporters:
+            - type: 'text'
+            - type: 'text-summary'
+            - { type: 'html', subdir: 'report-html' }

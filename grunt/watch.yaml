@@ -1,0 +1,6 @@
+options:
+    livereload: true
+files:
+    - 'app/**/*'
+tasks:
+    - 'build'

@@ -1,0 +1,5 @@
+server:
+    options:
+      livereload: true
+      base: 'dist/'
+      port: 5000
