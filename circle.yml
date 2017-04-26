@@ -1,7 +1,3 @@
-dependencies:
-    override:
-        - npm install --dev
-
 test:
     post:
         - cp coverage/* CIRCLE_ARTIFACTS

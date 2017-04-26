@@ -14,7 +14,6 @@
   "dependencies": {
     "express": "^4.15.2",
     "materialize-css": "^0.98.2",
-
     "uglifyify": "^3.0.4",
     "jasmine": "^2.6.0",
     "jasmine-expect": "^3.7.0",
