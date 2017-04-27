@@ -1,3 +1,4 @@
 main:
-    src: 'app/index.html'
-    dest: 'dist/index.html'
+    files:
+      - { expand: true, flatten: true, src: ['app/*.html'], dest: 'dist/', filter: 'isFile' }
+      - { expand: true, cwd: 'app/', src: ['assets/**/*'], dest: 'dist/', filter: 'isFile' }
