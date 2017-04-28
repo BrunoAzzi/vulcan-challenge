@@ -3,10 +3,16 @@ var Cloud = require('../js/helper/cloud.js');
 describe("Cloud class instance", function() {
     var cloud = new Cloud(1, 5);
 
-    var instantiateNewCloud = function () {
-        var cloud = new Cloud("asd", 5);
+    var instantiateCloudWithWrongTypeValue = function () {
+        return Cloud("asd", 5);
+    };
 
-        return cloud;
+    var instantiateCloudWithMisingValue = function () {
+        return new Cloud(5);
+    };
+
+    var instantiateCloudWithNoValue = function () {
+        return new Cloud();
     };
 
     it("must have a x and y numeric position", function () {
@@ -18,6 +24,8 @@ describe("Cloud class instance", function() {
     });
 
     it("must throw an error if a not supported value is given", function () {
-        expect(instantiateNewCloud).toThrowAnyError();
+        expect(instantiateCloudWithWrongTypeValue).toThrowAnyError();
+        expect(instantiateCloudWithMisingValue).toThrowAnyError();
+        expect(instantiateCloudWithNoValue).toThrowAnyError();
     });
 });
