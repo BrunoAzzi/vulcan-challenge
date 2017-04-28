@@ -16,9 +16,3 @@ test:
     post:
         - cp -a coverage/* $CIRCLE_ARTIFACTS
         - ./node_modules/.bin/codeclimate-test-reporter < $CIRCLE_ARTIFACTS/report-lcov/lcov.info
-
-deployment:
-    staging:
-        branch: master
-        heroku:
-            appname: vulcan-challenge
