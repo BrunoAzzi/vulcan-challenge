@@ -15,6 +15,12 @@ lint:
 test:
     - 'karma'
 
+'test:unit':
+    - 'karma:unit'
+
+'test:coverage':
+    - 'karma:coverage'
+
 build:
     - 'clean'
     - 'copy'
