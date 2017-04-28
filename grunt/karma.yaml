@@ -5,12 +5,14 @@ options:
     frameworks:
         - 'browserify'
         - 'jasmine'
+        - 'jasmine-matchers'
 
     files:
-        - 'app/js/**/*.js'
+        - 'app/specs/**/*.js'
+        - 'app/js/helper/**/*.js'
 
     preprocessors:
-        'app/js/**/!(*-spec).js':
+        'app/**/**/*.js':
             - 'browserify'
             - 'coverage'
 
