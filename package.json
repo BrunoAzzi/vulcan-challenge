@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prestart": "npm install",
+    "postinstal": "grunt build",
     "start": "grunt",
     "pretest": "npm install",
     "test": "grunt test"

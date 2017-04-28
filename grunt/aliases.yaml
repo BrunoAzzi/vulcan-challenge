@@ -2,6 +2,9 @@ default:
     - 'lint'
     - 'test'
     - 'build'
+    - 'serve'
+
+serve:
     - 'connect'
     - 'open'
     - 'watch'
